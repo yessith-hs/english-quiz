@@ -1,0 +1,109 @@
+➜ sfdx auth:web:login -d -a DevHub
+Successfully authorized yessith.hs@wise-goat-el6l0i.com with org ID 00D8c000008zSbmEAE
+
+
+➜ sfdx auth:web:login -d -a myhuborg
+Successfully authorized yessith.hs@wise-goat-el6l0i.com with org ID 00D8c000008zSbmEAE
+
+
+➜ sfdx auth:web:login -d -a myhuborgg
+Successfully authorized yessith.hs@wise-goat-el6l0i.com with org ID 00D8c000008zSbmEAE
+
+➜ sfdx force:org:create --setdefaultusername -f config/project-scratch-def.json --setalias my-scratch-org
+Successfully created scratch org: 00D7g000000H9CiEAK, username: test-utz7uvf9ccx8@example.com.
+
+sfdx force:source:deploy -m "ApexClass,Layout,CustomObject,LightningComponentBundle,ManagedContentType,CustomObject,StaticResource,CustomTab,PermissionSet,Flow"
+
+
+ // "experienceBundleSettings": {
+    //     "enableExperienceBundleMetadata": true
+    // },
+
+
+sfdx force:source:deploy -m "CustomSite,ExperienceBundle,Network"
+
+
+:::::::::::::::::::::::::::::
+
+
+{
+  "activeBrandingSetId" : "2779cca2-fc29-454e-996a-460ff4c09a00",
+  "customCSS" : "",
+  "developerName" : "byo",
+  "id" : "54cd4d1d-4913-46fa-9175-1252992af4b7",
+  "label" : "Build Your Own (LWR)",
+  "layouts" : {
+    "Inner" : "25d7c1ef-48e2-4e6e-81a6-5af772949b09",
+    "ServiceNotAvailable" : "32d5c4ab-4461-452e-b427-cf9c50c2f568"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "community_byo:scopedHeaderAndFooter",
+    "id" : "25d7c1ef-48e2-4e6e-81a6-5af772949b09",
+    "label" : "Scoped Header and Footer",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "backgroundImageConfig" : "",
+          "backgroundImageOverlay" : "rgba(0,0,0,0)",
+          "sectionConfig" : "{\"UUID\":\"487d666a-7886-4186-b70a-00f358edb8e8\",\"columns\":[{\"UUID\":\"b08757e3-a422-423f-be3d-c574fb293885\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+        },
+        "componentName" : "community_layout:section",
+        "id" : "487d666a-7886-4186-b70a-00f358edb8e8",
+        "regions" : [ {
+          "id" : "b08757e3-a422-423f-be3d-c574fb293885",
+          "regionLabel" : "Theme Header",
+          "regionName" : "headerSection",
+          "renditionMap" : { },
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "scopedBrandingSetId" : null,
+        "type" : "component"
+      } ],
+      "id" : "1b7602ba-5b34-46bd-93ea-406f28255de9",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "backgroundImageConfig" : "",
+          "backgroundImageOverlay" : "rgba(0,0,0,0)",
+          "sectionConfig" : "{\"UUID\":\"774a24aa-c027-407b-9038-6f9efc6af182\",\"columns\":[{\"UUID\":\"285e4650-eac1-46b8-94c8-0742c9ed5e74\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+        },
+        "componentName" : "community_layout:section",
+        "id" : "774a24aa-c027-407b-9038-6f9efc6af182",
+        "regions" : [ {
+          "id" : "285e4650-eac1-46b8-94c8-0742c9ed5e74",
+          "regionLabel" : "Theme Footer",
+          "regionName" : "footerSection",
+          "renditionMap" : { },
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "scopedBrandingSetId" : null,
+        "type" : "component"
+      } ],
+      "id" : "b1ba67db-e6e0-463e-9ac1-c0339a817d51",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "community_layout:simpleThemeLayout",
+    "id" : "32d5c4ab-4461-452e-b427-cf9c50c2f568",
+    "label" : "Service Not Available Theme Layout",
+    "regions" : [ {
+      "id" : "7b70ef96-1143-4470-baf2-1eb49edca8ff",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "56dad1e7-07b4-4d50-8ca7-d3ccf03f44ba",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

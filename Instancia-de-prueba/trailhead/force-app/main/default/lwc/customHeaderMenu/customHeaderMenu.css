@@ -1,0 +1,54 @@
+.menu-container {
+  position: sticky;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: var(--brand-color_blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 1;
+  border-bottom: 1px solid #eee;
+}
+
+
+@media only screen and (min-width:1024px) {
+
+  /* STYLES MENU */
+  .menu-container  {
+    height: auto;
+    width: 240px;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .menu_logo {
+    display: none;
+  }
+
+  .navMenu {
+    height: 100vh;
+    position: relative;
+    left: 0;
+  }
+
+  .navMenu_header figure:nth-child(2) {
+    display: none;
+  }
+
+  .navmenu_background {
+    display: block;
+    right: initial;
+    bottom: initial;
+    left: initial;
+    background-color: transparent;
+  }
+
+  .user.mobile {
+    display: none;
+  }
+}

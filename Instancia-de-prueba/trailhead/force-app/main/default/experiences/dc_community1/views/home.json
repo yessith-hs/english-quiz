@@ -1,0 +1,47 @@
+{
+  "appPageId" : "da279e50-da54-4b39-8da2-bed821a2bbdc",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "64c5b4cd-f007-49be-9b1d-f7fda1ef8898",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "aa3e5bcf-b4f9-4390-a3fd-61e73e7f9407",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><span style=\"font-size: 48px;\">Let's get started!</span></p><ol><li><span style=\"font-size: 18px;\">Unfamiliar with Build Your Own? Click Take a Tour in the Help menu.</span></li></ol><ul><li><span style=\"font-size: 18px;\">Want to add more pages? Take a look at the Pages menu.</span></li></ul><ol><li><span style=\"font-size: 18px;\">Want more components on your page? Drag and drop components from the Components panel.</span></li><li><span style=\"font-size: 18px;\">Want your users to see your company logo? Head on over to the Branding panel.</span></li><li><span style=\"font-size: 18px;\">Refine the look of your community with a custom theme layout. See the Lightning Communities Developer Guide.</span></li></ol>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "0815f4f4-29ef-4ed0-80ad-667e029571e9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b45709fe-b21c-48f8-a25d-106ee54c1c19",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "cb60ebb8-dd35-4a99-bb66-500178036f8a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b1893275-4c82-4c9e-82dc-63546202bd51",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d67aec3f-3aef-4511-a9e1-52105d61ccb6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}
