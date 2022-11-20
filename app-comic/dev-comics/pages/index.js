@@ -1,21 +1,20 @@
-import fs from 'fs/promises'
-import { Header } from 'components/Header'
+import fs from 'node:fs/promises'
 import { ListComics } from 'components/ListComics'
-import { MetaHeadSeo } from 'components/MetaHeadSeo'
+import { MainLayout } from 'components/MainLayout'
+import Head from 'next/head'
 
 export default function Home({ latesComics }) {
   return (
     <>
-      <MetaHeadSeo
-        title='xkcd - Comics for developers'
-        description='Comics for developers next app'
-      />
-      <Header />
+      <Head>
+        <title>xkcd - Comics for developers</title>
+        <meta name='description' content='Comics for developers next app' />
+      </Head>
 
-      <main className='px-2.5 max-w-md  m-auto mt-10'>
+      <MainLayout>
         <h1 className='text-3xl font-bold text-center'>Latest Comics!</h1>
         <ListComics latesComics={latesComics} />
-      </main>
+      </MainLayout>
     </>
   )
 }
@@ -35,5 +34,5 @@ export const getStaticProps = async () => {
   const latesComics = await Promise.all(promiseReadFiles).catch(error =>
     console.error(error)
   )
-  return { props: {  latesComics } }
+  return { props: { latesComics } }
 }

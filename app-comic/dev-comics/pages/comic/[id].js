@@ -1,9 +1,12 @@
-import fs from 'fs/promises'
 import Image from 'next/image'
+import path from 'path'
+import fs from 'node:fs/promises'
 import { Header } from 'components/Header'
 import { MetaHeadSeo } from 'components/MetaHeadSeo'
 import { NavLink } from 'components/NavLink'
-import path from 'path'
+import { Footer } from 'components/Footer'
+import Head from 'next/head'
+import { MainLayout } from 'components/MainLayout'
 
 function comic({
   img,
@@ -17,38 +20,44 @@ function comic({
 }) {
   return (
     <>
-      <MetaHeadSeo
-        title='xkcd - Details Comic'
-        description='Details Comic for developers'
-      />
-      <Header />
-      <main className='px-2.5 max-w-md  m-auto mt-10'>
-        <section>
+      <Head>
+        <title>xkcd - Details Comic</title>
+        <meta name='description' content='Details Comic for developers' />
+      </Head>
+
+      <MainLayout>
+        <section className='px-2.5 max-w-lg  m-auto mt-10'>
           <article>
-            <h1 className='font-bold'>{restOfComic.title}</h1>
-            <Image
-              src={img}
-              alt={restOfComic.title}
-              layout='responsive'
-              objectFit='contain'
-              width={width}
-              height={height}
-            />
+            <h1 className='mb-4 text-xl font-bold text-center'>
+              {restOfComic.title}
+            </h1>
+            <div className='max-w-xs m-auto mb-5'>
+              <Image
+                src={img}
+                alt={restOfComic.title}
+                layout='responsive'
+                objectFit='contain'
+                width={width}
+                height={height}
+              />
+            </div>
             <p>{restOfComic.alt}</p>
           </article>
-          <div className='flex justify-between'>
+          <div className='flex justify-between mt-5 font-bold'>
             {hasPrevious && (
-              <NavLink href={`/comic/${prevId}`}>Previous</NavLink>
+              <NavLink href={`/comic/${prevId}`}>⬅ Previous</NavLink>
             )}
-            {hasNext && <NavLink href={`/comic/${nextId}`}>Next</NavLink>}
+            {hasNext && <NavLink href={`/comic/${nextId}`}>Next ➡</NavLink>}
           </div>
         </section>
-      </main>
+      </MainLayout>
     </>
   )
 }
 
 export default comic
+
+// * el getStaticPaths es útil si se tiene una pequeña cantidad de rutas para crear o si no se agregan nuevos datos de página con frecuencia (2500 paginas es bastante).
 
 export async function getStaticPaths() {
   const jsonFiles = await fs.readdir('./comics')
@@ -56,7 +65,6 @@ export async function getStaticPaths() {
   const paths = jsonFiles.map(file => {
     const basePath = path.basename(file, '.json')
     const [, id] = basePath.split('-')
-
     return { params: { id } }
   })
 

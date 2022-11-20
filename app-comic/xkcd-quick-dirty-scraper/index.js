@@ -11,8 +11,9 @@ const time = (str = 'tiempo') => {
 
 const { writeJson } = fs
 const INITIAL_ID_XKCD_COMIC = 2500
-const MAX_ID_XKCD_COMIC = 2501
-// const MAX_ID_XKCD_COMIC = 2600
+const MAX_ID_XKCD_COMIC = 2600
+const indexFileContent = []
+const indexJsonFile = `./comics/index.json`
 
 for (let id = INITIAL_ID_XKCD_COMIC; id < MAX_ID_XKCD_COMIC; id++) {
   const API_URL = `https://xkcd.com/${id}/info.0.json`
@@ -33,7 +34,9 @@ for (let id = INITIAL_ID_XKCD_COMIC; id < MAX_ID_XKCD_COMIC; id++) {
     height,
     restOfComic
   }
+  indexFileContent.push(comicStore)
   await writeJson(jsonFile, comicStore)
   log(`✅ Wrote ${jsonFile}! \n`)
 }
+await writeJson(indexJsonFile, indexFileContent)
 time()
