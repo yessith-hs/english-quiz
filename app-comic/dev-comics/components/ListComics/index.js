@@ -1,8 +1,8 @@
 import { CardComic } from 'components/CardComic'
 
-export const ListComics = ({ latesComics }) => {
+export function ListComics({ latesComics }) {
   return (
-    <section className='grid sm:grid-cols-2 md:grid-cols-3 gap-2'>
+    <section className='grid gap-2 sm:grid-cols-2 md:grid-cols-3'>
       {latesComics.map(comic => (
         <CardComic
           key={comic.id}

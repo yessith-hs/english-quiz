@@ -1,11 +1,8 @@
 import Image from 'next/image'
+import Head from 'next/head'
 import path from 'path'
 import fs from 'node:fs/promises'
-import { Header } from 'components/Header'
-import { MetaHeadSeo } from 'components/MetaHeadSeo'
 import { NavLink } from 'components/NavLink'
-import { Footer } from 'components/Footer'
-import Head from 'next/head'
 import { MainLayout } from 'components/MainLayout'
 
 function comic({

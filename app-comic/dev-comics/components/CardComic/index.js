@@ -1,7 +1,7 @@
-import { NavLink } from 'components/NavLink'
 import Image from 'next/image'
+import { NavLink } from 'components/NavLink'
 
-export const CardComic = ({ id, comic,img,width,height }) => {
+export function CardComic  ({ id, comic,img,width,height })  {
   return (
     <article>
       <NavLink href={`/comic/${id}`}>

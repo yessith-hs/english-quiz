@@ -1,0 +1,57 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.listQuestions {
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: minmax(300px, auto);
+  grid-auto-flow: dense;
+  gap: 0.5rem;
+}
+
+.routine {
+  height: 100%;
+  width: 100%;
+  grid-column: span 3;
+  grid-row: span 1;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.routine:hover {
+  background-color: #64329a;
+}
+
+.routineBox {
+  display: grid;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.routineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: minmax(300px, auto);
+  grid-auto-flow: dense;
+  gap: 0.5rem;
+}
+
+.routineGrid figure {
+    background-color: #333;
+}
+
+.routineGrid img {
+  width: 100%;
+  height: 100%;
+}

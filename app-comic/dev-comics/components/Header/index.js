@@ -1,7 +1,8 @@
-import { NavLink } from 'components/NavLink'
 import Image from 'next/image'
+import { NavLink } from 'components/NavLink'
 import logo from '../../public/logo.png'
-export const Header = () => {
+
+export function Header  () {
   return (
     <header className='flex items-center justify-between px-2.5 max-w-xl  m-auto'>
       <NavLink href='/'>
@@ -14,9 +15,6 @@ export const Header = () => {
         <ul className='flex items-center gap-2'>
           <li>
             <NavLink href='/'>Home</NavLink>
-          </li>
-          <li>
-            <NavLink href='/about'>About</NavLink>
           </li>
           <li>
             <NavLink href='/search'>Search</NavLink>

@@ -1,0 +1,221 @@
+:root {
+  font-size: 1.7rem;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+:root {
+  --brand-color_1: #f77f00;
+  --brand-color_2: #00ccff;
+  --brand-color_3: #9933ff;
+  --brand-color_4: tomato;
+  --brand-color_5: #fff35c;
+  --brand-color_6: #8429de;
+  --brand-color_7: #121212;
+  --brand-color_8: #18061f;
+  --theme-body-txt: #f3f3f3;
+  --theme-body-bg: #001219;
+  --theme--contrast-0: #d62828;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+
+html,
+body,
+div,
+span,
+button,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+a,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+
+html {
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 1.7rem; */
+  font-weight: 400;
+  color: #ffffff;
+  /* line-height: 1.5; */
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+span {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+/*------------------------------------*\
+    $LINK
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: #0e6fff;
+}
+
+a:hover {
+  color: #0e6fff;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover,
+a:active {
+  outline: none;
+}
+
+img{
+   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+  aspect-ratio: 16/9;
+}
